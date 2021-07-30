@@ -1,12 +1,22 @@
 package ru.mail.l_chr93.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PlayRoom {
     private List<Toy> toyList;
     
-    public PlayRoom(List<Toy> toyList) {
-    	this.toyList = toyList;
+    public PlayRoom(List<Toy> toyList, int maxTotalCostToys) {
+    	this.toyList = new ArrayList<Toy>();
+    	int index = 0;
+    	int totalCost = 0;
+    	while (toyList.size() > index + 1) {
+    		if (totalCost + toyList.get(index).getPrice() <= maxTotalCostToys) {
+    			totalCost += toyList.get(index).getPrice();
+    			this.toyList.add(toyList.get(index));
+    		}
+			index++;
+    	}
     }
     
     public void viewToyList() {

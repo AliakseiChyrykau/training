@@ -9,9 +9,9 @@ public class PlayRoom {
     	this.toyList = toyList;
     }
     
-    public void viewToysList() {
+    public void viewToyList() {
 		for (Toy toy : toyList) {
-			System.out.format("ID игрушки %d, название: %s, размер: %s, %s, цена: %d руб.%n", toy.getId(), toy.getName(),
+			System.out.format("ID игрушки: %-3d название: %-7s размер: %-10s Минимальный возраст: %-3s цена: %-4d руб.%n", toy.getId(), toy.getName(),
 					toy.getSize(), toy.getAgeGroup(), toy.getPrice());
 		}
 	}

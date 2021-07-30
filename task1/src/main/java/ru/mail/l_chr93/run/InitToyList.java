@@ -23,8 +23,12 @@ public class InitToyList {
 		sizeMap.put("Big", new Big());
 		
 	}
+	
+	public InitToyList() {
+		InitToyList();
+	}
 
-	public InitToyList(){
+	private void InitToyList(){
 		this.toyList.add(new Ball(25, ageGroupMap.get("ForBabies"), sizeMap.get("Big")));
 		this.toyList.add(new Car(123, ageGroupMap.get("ForTeenagers"), sizeMap.get("Average")));
 		this.toyList.add(new Clack(33, ageGroupMap.get("ForChildren"), sizeMap.get("Small")));

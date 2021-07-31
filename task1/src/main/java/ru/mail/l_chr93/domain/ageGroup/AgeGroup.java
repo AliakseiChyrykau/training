@@ -13,6 +13,6 @@ public abstract class AgeGroup {
 
 	@Override
 	public String toString() {
-		return String.format("Age restriction: %d+", getMinAge());
+		return String.format("%d+", getMinAge());
 	} 
 }

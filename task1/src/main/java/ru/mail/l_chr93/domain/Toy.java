@@ -39,6 +39,12 @@ public abstract class Toy {
 	public String getSize() {
 		return size.getSize();
 	}
+
+	@Override
+	public String toString() {
+		return String.format("ID игрушки: %-3d название: %-7s размер: %-9s Минимальный возраст: %-2s года/лет цена: %-3d руб.%n", 
+				id, name, getSize(), getAgeGroup(), price);
+	}
     
     
 }

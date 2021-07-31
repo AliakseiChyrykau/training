@@ -10,4 +10,8 @@ public abstract class Size {
 	public String getSize() {
 		return this.size;
 	}
+	
+	public String toString() {
+		return size;
+	}
 }

@@ -26,10 +26,10 @@ public class PlayRoom {
 	public static final Comparator<Toy> NAME_AND_PRICE_COMPORATOR = NAME_COMPARATOR.thenComparing(PRICE_COMPORATOR);
 	
 	private List<Toy> toyList;
-	public static Map<String, AgeGroup> ageGroupMap = new HashMap<String, AgeGroup>();
-	public static Map<String, Size> sizeMap = new HashMap<String, Size>();
+	public static final Map<String, AgeGroup> ageGroupMap = new HashMap<String, AgeGroup>();
+	public static final Map<String, Size> sizeMap = new HashMap<String, Size>();
 
-	{
+	static {
 		ageGroupMap.put("ForBabies", new ForBabies());
 		ageGroupMap.put("ForChildren", new ForChildren());
 		ageGroupMap.put("ForTeenagers", new ForTeenagers());

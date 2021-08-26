@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concerts 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="xsd.xsd">
+    <concert orderid="ID-1">
+        <dance_number orderid="NID-1">
+            <type>бальный</type>
+            <scene>актовый зал</scene>
+            <number_of_dancers>сольный</number_of_dancers>
+            <music>живая музыка</music>
+            <dancers>
+                <dancer>
+                    <name>тест</name>
+                    <age>25</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>
+		        <dancegroup>
+                    <name>тест</name>
+                    <name_head>тест</name_head>
+                    <year_formation>1995-02-03</year_formation> 
+                </dancegroup> 
+		        <dancegroup>
+                    <name>тест</name>
+                    <name_head>тест</name_head>
+                    <year_formation>1995-02-03</year_formation> 
+                </dancegroup>          
+            </dancers>
+            <number>1</number>   
+        </dance_number>
+        <dance_number orderid="NID-2">
+            <type>восточный</type>
+            <scene>актовый зал</scene>
+            <number_of_dancers>сольный</number_of_dancers>
+            <music>живая музыка</music>
+            <dancers>
+                <dancegroup>
+                    <name>тест</name>
+                    <name_head>тест</name_head>
+                    <year_formation>1995-02-03</year_formation> 
+                </dancegroup>  
+            </dancers>
+            <number>2</number>   
+        </dance_number>
+        <dance_number orderid="NID-3">
+            <type>эстрадный</type>
+            <scene>актовый зал</scene>
+            <number_of_dancers>сольный</number_of_dancers>
+            <music>живая музыка</music>
+            <dancers>
+              <dancer>
+                    <name>тест</name>
+                    <age>13</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>  
+                <dancegroup>
+                    <name>тест</name>
+                    <name_head>тест</name_head>
+                    <year_formation>1995-02-03</year_formation> 
+                </dancegroup>    
+            </dancers>
+            <number>3</number>   
+        </dance_number>
+        <dance_number orderid="NID-4">
+            <type>народный</type>
+            <scene>актовый зал</scene>
+            <number_of_dancers>сольный</number_of_dancers>
+            <music>живая музыка</music>
+            <dancers>
+                 
+            </dancers>
+            <number>4</number>   
+        </dance_number>
+        <dance_number orderid="NID-5">
+            <type>бальный</type>
+            <scene>актовый зал</scene>
+            <number_of_dancers>сольный</number_of_dancers>
+            <music>живая музыка</music>
+            <dancers>
+                 
+            </dancers>
+            <number>5</number>   
+        </dance_number>
+        <dance_number orderid="NID-6">
+            <type>эстрадный</type>
+            <scene>актовый зал</scene>
+            <number_of_dancers>сольный</number_of_dancers>
+            <music>живая музыка</music>
+            <dancers>
+                <dancer>
+                    <name>тест</name>
+                    <age>13</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>
+                <dancer>
+                    <name>тест</name>
+                    <age>13</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>
+            </dancers>
+            <number>6</number>   
+        </dance_number>
+    </concert>
+</concerts>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- определение элементов -->
+    <xs:element name="type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="бальный"/>
+                <xs:enumeration value="народный"/>
+                <xs:enumeration value="эстрадный"/>
+                <xs:enumeration value="восточный"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="scene">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="актовый зал"/>
+                <xs:enumeration value="уличная площадка"/>
+                <xs:enumeration value="телестудия"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="number_of_dancers">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="массовый"/>
+                <xs:enumeration value="сольный"/>
+                <xs:enumeration value="парный"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>    
+
+    <xs:element name="music">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="фонограмма"/>
+                <xs:enumeration value="живая музыка"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="number" type="xs:integer"/>
+    
+    <!-- определение атрибутов -->
+    <xs:attribute name="orderid" type="xs:ID"/>
+
+    <!-- определение составных элементов -->
+    <xs:element name="dancer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="age" type="xs:integer"/>
+                <xs:element name="how_many_years" type="xs:integer"/> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="dancegroup">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="name_head" type="xs:string"/>
+                <xs:element name="year_formation" type="xs:date"/> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="dancers">
+        <xs:complexType>
+           <xs:sequence>
+               <xs:element ref="dancer" minOccurs="0" maxOccurs="unbounded"/>
+               <xs:element ref="dancegroup" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="dance_number">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="type"/>
+                <xs:element ref="scene"/>
+                <xs:element ref="number_of_dancers"/>
+                <xs:element ref="music"/>
+                <xs:element ref="dancers"/>
+                <xs:element ref="number"/>
+            </xs:sequence>
+            <xs:attribute ref="orderid" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="concert">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dance_number" maxOccurs="unbounded"/>    
+            </xs:sequence>
+            <xs:attribute ref="orderid" use="required"/>   
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="concerts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="concert" maxOccurs="unbounded"/>    
+            </xs:sequence>  
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

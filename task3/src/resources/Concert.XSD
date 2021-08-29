@@ -4,10 +4,10 @@
     <xs:element name="type">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:enumeration value="бальный"/>
-                <xs:enumeration value="народный"/>
-                <xs:enumeration value="эстрадный"/>
-                <xs:enumeration value="восточный"/>
+                <xs:enumeration value="BALLROOM"/>
+                <xs:enumeration value="NATIONAL"/>
+                <xs:enumeration value="POP"/>
+                <xs:enumeration value="EASTERN"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:element>
@@ -15,9 +15,9 @@
     <xs:element name="scene">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:enumeration value="актовый зал"/>
-                <xs:enumeration value="уличная площадка"/>
-                <xs:enumeration value="телестудия"/>
+                <xs:enumeration value="ASSEMBLY_HALL"/>
+                <xs:enumeration value="OUTDOOR_PLAYGROUND"/>
+                <xs:enumeration value="TV_STUDIO"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:element>
@@ -25,9 +25,9 @@
     <xs:element name="number_of_dancers">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:enumeration value="массовый"/>
-                <xs:enumeration value="сольный"/>
-                <xs:enumeration value="парный"/>
+                <xs:enumeration value="MASS"/>
+                <xs:enumeration value="SOLO"/>
+                <xs:enumeration value="PAIRED"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:element>    
@@ -35,8 +35,8 @@
     <xs:element name="music">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:enumeration value="фонограмма"/>
-                <xs:enumeration value="живая музыка"/>
+                <xs:enumeration value="SOUNDTRACK"/>
+                <xs:enumeration value="LIVE_MUSIC"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:element>

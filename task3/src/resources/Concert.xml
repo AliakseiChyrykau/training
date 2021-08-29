@@ -4,10 +4,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="xsd.xsd">
     <concert orderid="ID-1">
         <dance_number orderid="NID-1">
-            <type>бальный</type>
-            <scene>актовый зал</scene>
-            <number_of_dancers>сольный</number_of_dancers>
-            <music>живая музыка</music>
+            <type>BALLROOM</type>
+            <scene>ASSEMBLY_HALL</scene>
+            <number_of_dancers>PAIRED</number_of_dancers>
+            <music>LIVE_MUSIC</music>
             <dancers>
                 <dancer>
                     <name>тест</name>
@@ -28,10 +28,10 @@ xsi:noNamespaceSchemaLocation="xsd.xsd">
             <number>1</number>   
         </dance_number>
         <dance_number orderid="NID-2">
-            <type>восточный</type>
-            <scene>актовый зал</scene>
-            <number_of_dancers>сольный</number_of_dancers>
-            <music>живая музыка</music>
+            <type>EASTERN</type>
+            <scene>TV_STUDIO</scene>
+            <number_of_dancers>PAIRED</number_of_dancers>
+            <music>SOUNDTRACK</music>
             <dancers>
                 <dancegroup>
                     <name>тест</name>
@@ -42,10 +42,10 @@ xsi:noNamespaceSchemaLocation="xsd.xsd">
             <number>2</number>   
         </dance_number>
         <dance_number orderid="NID-3">
-            <type>эстрадный</type>
-            <scene>актовый зал</scene>
-            <number_of_dancers>сольный</number_of_dancers>
-            <music>живая музыка</music>
+            <type>POP</type>
+            <scene>OUTDOOR_PLAYGROUND</scene>
+            <number_of_dancers>MASS</number_of_dancers>
+            <music>SOUNDTRACK</music>
             <dancers>
               <dancer>
                     <name>тест</name>
@@ -61,30 +61,48 @@ xsi:noNamespaceSchemaLocation="xsd.xsd">
             <number>3</number>   
         </dance_number>
         <dance_number orderid="NID-4">
-            <type>народный</type>
-            <scene>актовый зал</scene>
-            <number_of_dancers>сольный</number_of_dancers>
-            <music>живая музыка</music>
+            <type>NATIONAL</type>
+            <scene>ASSEMBLY_HALL</scene>
+            <number_of_dancers>MASS</number_of_dancers>
+            <music>LIVE_MUSIC</music>
             <dancers>
-                 
+                <dancer>
+                    <name>тест</name>
+                    <age>13</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>
+                <dancer>
+                    <name>тест</name>
+                    <age>13</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>     
             </dancers>
             <number>4</number>   
         </dance_number>
         <dance_number orderid="NID-5">
-            <type>бальный</type>
-            <scene>актовый зал</scene>
-            <number_of_dancers>сольный</number_of_dancers>
-            <music>живая музыка</music>
+            <type>BALLROOM</type>
+            <scene>TV_STUDIO</scene>
+            <number_of_dancers>PAIRED</number_of_dancers>
+            <music>LIVE_MUSIC</music>
             <dancers>
-                 
+                <dancer>
+                    <name>тест</name>
+                    <age>13</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>
+                <dancer>
+                    <name>тест</name>
+                    <age>13</age>
+                    <how_many_years>12</how_many_years>
+                </dancer>     
             </dancers>
             <number>5</number>   
         </dance_number>
         <dance_number orderid="NID-6">
-            <type>эстрадный</type>
-            <scene>актовый зал</scene>
-            <number_of_dancers>сольный</number_of_dancers>
-            <music>живая музыка</music>
+            <type>POP</type>
+            <scene>ASSEMBLY_HALL</scene>
+            <number_of_dancers>SOLO</number_of_dancers>
+            <music>SOUNDTRACK</music>
             <dancers>
                 <dancer>
                     <name>тест</name>

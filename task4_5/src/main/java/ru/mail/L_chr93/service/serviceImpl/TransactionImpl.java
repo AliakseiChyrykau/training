@@ -1,0 +1,45 @@
+package ru.mail.L_chr93.service.serviceImpl;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import ru.mail.L_chr93.service.Transaction;
+import ru.mail.L_chr93.service.TransactionException;
+
+public class TransactionImpl implements Transaction {
+    
+    Connection connection;
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
+    }
+
+    @Override
+    public void start() throws TransactionException {
+        try {
+            connection.setAutoCommit(false);
+        } catch (SQLException e) {
+            throw new TransactionException(e);
+        }
+    }
+
+    @Override
+    public void commit() throws TransactionException {
+        try {
+            connection.commit();
+            connection.setAutoCommit(true);
+        } catch (SQLException e) {
+            throw new TransactionException(e);
+        }
+    }
+
+    @Override
+    public void rollback() throws TransactionException {
+        try {
+            connection.rollback();
+            connection.setAutoCommit(true);
+        } catch (SQLException e) {
+            throw new TransactionException(e);
+        }
+    }
+}

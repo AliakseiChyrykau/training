@@ -67,9 +67,8 @@ DROP TABLE IF EXISTS technical_tasks;
 CREATE TABLE technical_tasks
 (
     Id INT PRIMARY KEY AUTO_INCREMENT,
-	FirstName VARCHAR(20),
 	Users_id INT NOT NULL,
-    Date_create DATE NOT NULL,
+        Date_create DATE NOT NULL,
 	Dev_Level INT NOT NULL,
 	Number_dev INT NOT NULL,
 	FOREIGN KEY (users_id)  REFERENCES users (Id),

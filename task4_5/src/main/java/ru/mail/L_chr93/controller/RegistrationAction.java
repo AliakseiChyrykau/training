@@ -25,6 +25,7 @@ public class RegistrationAction extends Action {
             service.save(user);
             HttpSession session = req.getSession();
             session.setAttribute("currentUser", user);
+            session.setAttribute("roleTagUrl", user.getRole().getUrl());
             return new Forward("/index", false);
         } catch (ServiceFactoryException | ServiceException e) {
             throw new ServletException(e);

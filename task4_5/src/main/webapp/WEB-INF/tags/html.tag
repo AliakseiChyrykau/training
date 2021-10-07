@@ -20,7 +20,7 @@
 			<c:if test="${not empty currentUser}">
 				<div class="navigation">
 					<div class="menuItem">
-					
+					    <c:import url="${roleTagUrl}" />
 					</div>
 				</div>
 		    </c:if>

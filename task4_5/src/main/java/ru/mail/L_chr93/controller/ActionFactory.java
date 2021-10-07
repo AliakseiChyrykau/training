@@ -16,6 +16,8 @@ public class ActionFactory {
 		actions.put("/logout", LogoutAction.class);
 		actions.put("/setLanguage", LanguageAction.class);
 		actions.put("/registrationPerform", RegistrationAction.class);
+		actions.put("/toTTForm", toTTFormAction.class);
+		actions.put("/createTT", createTTAction.class);
 	}
 
 	@SuppressWarnings("deprecation")

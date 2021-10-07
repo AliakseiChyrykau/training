@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
      <configuration monitorInterval="3">
 	  <appenders>
-			<File name="FILE" fileName="../logs/HorceRacing/error.log">
+			<File name="FILE" fileName="../logs/dev_group/error.log">
 			  <PatternLayout pattern="%d{ISO8601} [%-5p] (%F:%L) - %m%n"/>
 			</File>
 	  </appenders>

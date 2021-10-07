@@ -8,6 +8,8 @@ public class User {
 	
 	private Long id = null;
 	private String name;
+	private String lastName;
+	private String Login;
 	private String password;
 	private Role role;
 	
@@ -26,8 +28,24 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public String getPassword() {
+		
+	public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLogin() {
+        return Login;
+    }
+
+    public void setLogin(String login) {
+        Login = login;
+    }
+
+    public String getPassword() {
 		return password;
 	}
 	

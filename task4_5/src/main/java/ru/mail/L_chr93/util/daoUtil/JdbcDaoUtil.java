@@ -3,18 +3,30 @@ package ru.mail.L_chr93.util.daoUtil;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import ru.mail.L_chr93.service.serviceImpl.UserServiceImpl;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import ru.mail.L_chr93.connectionPool.ConnectionPool;
-
 public class JdbcDaoUtil {
-    private ConnectionPool pool;
+	
+	private static final Logger log = LogManager.getLogger(JdbcDaoUtil.class);
 
-    public Connection getConnection() throws SQLException {
-        return pool.getConnection();
+    private Connection con;
+
+    public Connection getConnection() {
+        return con;
+    }
+
+    public void setConnection(Connection con) {
+        this.con = con;
     }
 
     public Long getId(String sql) {
@@ -33,8 +45,8 @@ public class JdbcDaoUtil {
 
     public <T> T selectOne(String sql, RowMap<T> rowMap, Object... args) {
         T obj = null;
-        try (Connection con = getConnection(); PreparedStatement stmnt = con.prepareStatement(sql)) {
-            for (int i = 0; i < args.length; i++) {
+        try (Connection con = getConnection(); PreparedStatement stmnt = con.prepareStatement(sql)) {	
+        	for (int i = 0; i < args.length; i++) {
                 stmnt.setObject(i + 1, args[i]);
             }
             try (ResultSet rs = stmnt.executeQuery()) {
@@ -44,7 +56,7 @@ public class JdbcDaoUtil {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }	
         return obj;
     }
 
